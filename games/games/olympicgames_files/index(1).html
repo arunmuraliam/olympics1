@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!-- saved from url=(0127)https://s0.2mdn.net/10751867/1631733609884/620000107_Q221_GreenLake_Demanding%20Workloads_html_300x250_EN-US/300x250/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="ad.size" content="width=300,height=250">
+		<title>HPE_Greenlake - Version_1</title>
+		<!-- styles -->
+		<link href="./default.css" rel="stylesheet" media="all">
+		<link href="./style.css" rel="stylesheet" media="all">
+		<!-- imgLoad -->
+		<script src="./imagesloaded.pkgd.min.js.download"></script>
+		<!-- <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>	 -->
+		<script type="text/javascript">var clickTag0 = "http://www.google.com";</script>
+		<!-- plugin styles/script tags -->
+		<!-- gsap3 -->
+		<script src="./gsap_3.5.1_min.js.download"></script>
+	<script type="text/javascript">
+    
+  (function() {
+    var MAX_URL_PARAM_LENGTH = 34;
+    var CLICK_X_URL_KEY = 'nx';
+    var CLICK_Y_URL_KEY = 'ny';
+    var CREATIVE_DIMENSIONS_KEY = 'dim';
+    var AD_URL_PARAM = '&adurl=';
+
+    var relegateNavigation = '';
+    var urlParamMap = {};
+
+    urlParamMap[CLICK_X_URL_KEY] = null;
+    urlParamMap[CLICK_Y_URL_KEY] = null;
+    urlParamMap[CREATIVE_DIMENSIONS_KEY] = null;
+
+    var handleClickTagMessage = function(e) {
+      try {
+        var eventData = JSON.parse(e.data);
+      } catch (err) {
+        return;
+      }
+      if (eventData.isInitClickTag) {
+        if (eventData.clickTags) {
+          for (var i = 0; i < eventData.clickTags.length; i++) {
+            var clkTag = eventData.clickTags[i];
+            window[clkTag.name] = clkTag.url;
+          }
+        } else if (eventData.clickTag) {
+          window.clickTag = eventData.clickTag;
+        }
+        relegateNavigation = eventData.relegateNavigation;
+      }
+    };
+
+    var storeClickCoordinates = function(e) {
+      urlParamMap[CLICK_X_URL_KEY] = Math.round(e.clientX);
+      urlParamMap[CLICK_Y_URL_KEY] = Math.round(e.clientY);
+    };
+
+    var getCreativeDimensions = function() {
+      return window.innerWidth + 'x' + window.innerHeight;
+    }
+
+    var getExitClickParams = function(e) {
+      urlParamMap[CREATIVE_DIMENSIONS_KEY] = getCreativeDimensions();
+
+      var exitParams = '';
+      for (var key in urlParamMap) {
+        exitParams += '&' + key + '=';
+        if (urlParamMap[key] !== null) {
+          exitParams += urlParamMap[key];
+        }
+      }
+      return exitParams;
+    }
+
+    var appendExitClickParams = function(url) {
+      var adUrlIndex = url.toLowerCase().indexOf(AD_URL_PARAM);
+      var paramsToBeAdded = getExitClickParams();
+      if (adUrlIndex > -1 && paramsToBeAdded.length <= MAX_URL_PARAM_LENGTH) {
+        url = url.substr(0, adUrlIndex) + paramsToBeAdded +
+          url.substr(adUrlIndex);
+      };
+      return url;
+    };
+
+    if (open.call) {
+      window.open = function(open) {
+        return function(url, name, features) {
+          url = appendExitClickParams(url);
+          if (relegateNavigation === 'parent') {
+            var message = {'clickTag': url, 'isPostClickTag': true};
+            parent.postMessage(JSON.stringify(message), '*');
+          } else {
+            var args = [url, name];
+            if (features) {
+              args.push(features);
+            }
+            open.apply(window, args);
+          }
+        };
+      }(window.open);
+    }
+
+    if (window.addEventListener) {
+      window.addEventListener(
+          'message', handleClickTagMessage, false);
+      window.addEventListener('mousedown', storeClickCoordinates, true);
+    } else {
+      window.attachEvent('onmessage', handleClickTagMessage);
+    }
+  })();
+    
+  </script></head>
+	<body>
+	<div class="adSize" id="viewport" style="opacity: 1; visibility: inherit;">
+		<div id="backupBG" style="opacity: 1; visibility: inherit;"></div>
+	<!-- ad elements -->
+	<div id="bgHolder" style="opacity: 1; transform: scale(1.05, 1.05);">
+		<svg id="F1-bgMask1" style="height: 250px; opacity: 1;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 250">
+			<defs>
+			<filter id="turb">
+			<feturbulence id="turbwave" type="fractalNoise" baseFrequency="0.01" numOctaves="10" result="turbulence_3" data-filterid="3"></feturbulence>
+			<fedisplacementmap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="turbulence_3" scale="9"></fedisplacementmap>
+			</filter>
+			<style> .cls-1 { fill: none;  } .cls-2 { isolation: isolate; } .cls-3 { clip-path: url(#clip-path); } .cls-4 { opacity: 0.7; mix-blend-mode: screen; } .cls-4, .cls-5 { fill: url(#linear-gradient); } .cls-5 { opacity: 0.8; mix-blend-mode: multiply; } </style>
+			<clippath id="clip-path" transform="translate(0)">
+			<polygon id="clipMask" class="cls-1" points="-109.53 250 -409.59 250 -409.59 0 0 0 -109.53 250" data-svg-origin="-409.5899963378906 0" transform="matrix(1,0,0,1,409,0)" style="transform-origin: 0px 0px;"></polygon>
+			</clippath>
+						
+			</defs>
+			<g class="cls-2">
+				<g id="imgCon">
+					<image filter="url(#turb)" id="F1-image1" width="400" height="333" transform="translate(0) scale(0.75)" xlink:href="assets/F1-image1.jpg" style="opacity: 1;"></image>
+					<g id="gradientMask">
+						<g class="cls-3">
+							<image filter="url(#turb)" id="F1-image2" width="400" height="333" transform="translate(0) scale(0.75)" xlink:href="assets/F1-image3.jpg" style="opacity: 0.9;"></image>
+										
+						</g>
+					</g>
+				</g>
+			</g>
+		</svg>
+		<div id="F1-image3" class="F2 adSize posAb topLef bgDef" style="opacity: 0;"></div>
+			<div id="waterGlimmer" class="F2 adSize posAb topLef bgDef" style="opacity: 0.4315; transform: translate3d(0px, 0px, 0.01px);"></div>
+		<div id="light" class="F2 adSize posAb topLef bgDef" style="opacity: 0.2;"></div>
+	</div>
+	<svg id="text-effect" class="posAb topLef" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 250" style="opacity: 1;">
+		<defs>
+		<clippath id="clip-path-lockup">
+		<path id="element" d="M20,75v61.44H233.89V75Zm200.52,48.07H33.37V88.38H220.52Z" style="fill: none"></path>
+		</clippath>
+		</defs>
+		<g id="lockup-clip">
+			<g style="clip-path: url(#clip-path-lockup)">
+				<image id="lockup-image" width="400" height="333" transform="matrix(0.75,0,0,0.75,0,0)" xlink:href="assets/EF-image1.jpg" data-svg-origin="170 140" style="opacity: 1; transform-origin: 0px 0px;"></image>
+			</g>
+		</g>
+	</svg>
+	
+
+
+
+	<div id="EF-image" class="F2 adSize posAb topLef bgDef" style="opacity: 0;"></div>
+	<div id="F1Copy1_Holder" style="opacity: 1;"><div id="F1-copy1" class="F1 adSize posAb topLef bgDef" style="opacity: 0; transform: translate3d(0px, -9px, 0.09px); visibility: hidden;"></div></div>
+	<div id="F1Copy1_2_Holder" style="opacity: 1;"><div id="F1-copy1_2" class="F1 adSize posAb topLef bgDef" style="opacity: 0; transform: translate3d(0px, 13px, 0.09px); visibility: hidden;"></div></div>
+	<div id="F1Copy2_Holder" style="opacity: 1;"><div id="F1-copy2" class="F1 adSize posAb topLef bgDef" style="opacity: 0; transform: translate3d(0px, -9px, 0.09px); visibility: hidden;"></div></div>
+	<div id="F1Copy2_2_Holder" style="opacity: 1;"><div id="F1-copy2_2" class="F1 adSize posAb topLef bgDef" style="opacity: 0; transform: translate3d(0px, 13px, 0.09px); visibility: hidden;"></div></div>
+	<div id="line" style="opacity: 1; transform: translate3d(86px, 0px, 0.01px) scale(0, 1);"></div>
+	<div id="line2" style="opacity: 1; transform: translate3d(83px, 0px, 0.01px) scale(0, 1);"></div>
+	
+	<div class="F2Copy" id="copy2_1" style="opacity: 0; transform: translate(0px, 0px); visibility: hidden;">
+		<div id="F2-copy1_1" class="F2 adSize posAb topLef bgDef" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="F2-copy1_2" class="F2 adSize posAb topLef bgDef" style="opacity: 1; transform: translate(0px, 0px);"></div>
+	</div>
+
+	<div class="F2Copy" id="copy2_2" style="opacity: 0; transform: translate(0px, 0px); visibility: hidden;">
+		<div id="F2-copy2_1" class="F2 adSize posAb topLef bgDef" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="F2-copy2_2" class="F2 adSize posAb topLef bgDef" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="F2-copy2_3" class="F2 adSize posAb topLef bgDef" style="opacity: 1; transform: translate(0px, 0px);"></div>
+	</div>
+	<div class="F2Copy" id="copy2_3" style="opacity: 0; transform: translate(0px, 0px); visibility: hidden;">
+	<div id="F2-copy3_1" class="F2 adSize posAb topLef bgDef" style="opacity: 1; transform: translate(0px, 0px);"></div>
+	<div id="F2-copy3_2" class="F2 adSize posAb topLef bgDef" style="opacity: 1; transform: translate(0px, 0px);"></div>
+	<div id="F2-copy3_3" class="F2 adSize posAb topLef bgDef" style="opacity: 1; transform: translate(0px, 0px);"></div>
+	</div>
+
+	<div class="F3Copy" id="copy3_1" style="opacity: 0; transform: translate(0px, 0px); visibility: hidden;">
+		<div id="F3-copy1_1" class="F3 adSize posAb topLef bgDef" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="F3-copy1_2" class="F3 adSize posAb topLef bgDef" style="opacity: 1; transform: translate(0px, 0px);"></div>
+	</div>
+
+	<div class="F3Copy" id="copy3_2" style="opacity: 0; transform: translate(0px, 0px); visibility: hidden;">
+		<div id="F3-copy2_1" class="F3 adSize posAb topLef bgDef" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="F3-copy2_2" class="F3 adSize posAb topLef bgDef" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="F3-copy2_3" class="F3 adSize posAb topLef bgDef" style="opacity: 1; transform: translate(0px, 0px);"></div>
+	</div>
+
+	<div class="F3Copy" id="copy3_3" style="opacity: 0; transform: translate(0px, 0px); visibility: hidden;">
+		<div id="F3-copy3_1" class="F3 adSize posAb topLef bgDef" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="F3-copy3_2" class="F3 adSize posAb topLef bgDef" style="opacity: 1; transform: translate(0px, 0px);"></div>
+	</div>
+
+	<div id="EF-copy2" class="EF adSize posAb topLef bgDef" style="opacity: 1; transform-origin: 150px 125px; transform: translate(0px, 0px);"></div>
+	
+	<div id="EF-overlayGreen" class="F2 adSize posAb topLef bgDef" style="opacity: 0;"></div>
+	<div id="EF-copy1" class="EF adSize posAb topLef bgDef" style="opacity: 1; transform-origin: 150px 125px; transform: translate(0px, 0px);"></div>
+	<div id="EF-copy3" class="EF adSize posAb topLef bgDef" style="opacity: 1;"></div>
+	<div id="EF-overlayHPE" class="F2 adSize posAb topLef bgDef" style="opacity: 0;"></div>
+	
+	<div id="EF-ctaArrow" class="CTA adSize posAb topLef bgDef" style="opacity: 1; transform: translate(0px, 0px);"></div>
+	<div id="EF-ctaCopy" class="CTA adSize posAb topLef bgDef" style="opacity: 1;"></div>
+	<!-- CTA LETTERS BEGIN -->
+	<div id="ctaHolder" style="opacity: 1; visibility: inherit; transform: translate(20px, -16px);">
+		<div id="cta-R1" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-U1" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-N1" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-Y1" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-O1" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-U2" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-R2" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-B1" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-U3" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-S1" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-I1" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-N2" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-E1" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-S2" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-S3" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-O2" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-N3" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-H1" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-P1" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-E2" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-G1" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div> 
+		<div id="cta-R3" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-E3" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-E4" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-N4" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-L1" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-A1" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-K1" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+		<div id="cta-E5" class="ctaLetter" style="opacity: 1; transform: translate(0px, 0px);"></div>
+	</div>
+	<!-- CTA LETTERS END -->
+	<div id="F1-logo1" class="adSize posAb topLef bgDef" style="opacity: 1; visibility: inherit;"></div>
+	
+	<div id="border" class="adSize posAb topLef" style="opacity: 1; visibility: inherit;"></div>
+	<!-- ad elements ^ -->
+	
+	<!-- <a id="clickTag0" class="clickTag adSize" href="javascript:void(0);" onclick="Enabler.exit('clickTag0');" style="border: 0;"></a> -->
+	<a id="clickTag0" class="clickTag adSize" href="javascript:void(window.open(window.clickTag0, &#39;blank&#39;))"></a>
+</div>
+
+<script src="./preloader.js.download"></script>
+<script src="./animation.js.download"></script>
+			
+		
+	</body></html>

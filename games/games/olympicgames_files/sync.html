@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)https://pre.ads.justpremium.com/v/1.0/t/sync?_c=al9ls7y1631847412577 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Justpremium Sync Pixel</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body marginwidth="0" marginheight="0">
+<script>
+    function getTrackUrl(ssp) {
+        var scope = window;
+        var trParams = '?rid=r-310b5616-c6dc-440b-9fe7-2724fa20505e-12335-311288405'
+            + '&sid=&uid=r-0b47f05e-de9f-4664-9b03-21520ff2ae73-15387-841369351&vr='
+            + '&ru=https%3A%2F%2Fwww.history.com%2Ftopics%2Fsports%2Folympic-games'
+            + '&tt=' + new Date().getTime()
+            + '&siw=0'
+            + '&sh='+ scope.screen.height
+            + '&sw=' + scope.screen.width
+            + '&wh=' + scope.innerHeight
+            + '&ww=' + scope.innerWidth
+            + '&an=pixel'
+            + '&vn=ap-northeast-1'
+            + '&sd='
+            + '&_c=' + Math.floor((Math.random() * Math.pow(2, 32)) + 1).toString()
+            + '&et=&aid=&said=&ei=&fc=&sp=&at=&cid=0&ist=&mg=&dl=&dlt=&ev=&vt=&zid=0&dr=0&di=&pr=&cw=&ch=&nt=&st='
+            + '&jp=%7B%22jpuid%22%3A%22r-14dec61e-e17c-428e-9f54-d393a94e110b-23823-194266268%22%2C%22ssp%22%3A%22SSP_VAR%22%7D'
+            + '&ty=cu';
+        trParams = trParams.replace('SSP_VAR', ssp);
+        return 'https://tracking.justpremium.com/tracking.gif' + trParams;
+    }
+
+    function pixelTracking(ssp) {
+        var url = getTrackUrl(ssp);
+        var imgPixel = window.document.createElement("img");
+        imgPixel.style.position = "fixed";
+        imgPixel.style.left = "-9999px";
+        imgPixel.style.top = "-9999px";
+        imgPixel.style.width = "1px";
+        imgPixel.style.height = "1px";
+        imgPixel.src = url;
+        window.document.body.appendChild(imgPixel);
+    }
+
+
+    if (true) {
+        var i = document.createElement('iframe');
+        i.setAttribute('frameBorder', 0);
+        i.src = 'https://u.openx.net/w/1.0/cm?gdpr=0&gdpr_consent=&id=fa4f7893-4738-4b38-9fc3-0dca639c806d&ph=26e53f82-d199-49df-9eca-7b350c0f9646&r=' + encodeURIComponent('https://apn1-match.justpremium.com/match/ox?rid=r-310b5616-c6dc-440b-9fe7-2724fa20505e-12335-311288405&jp_uid=r-14dec61e-e17c-428e-9f54-d393a94e110b-23823-194266268&ex_uid=');
+        window.document.body.appendChild(i);
+    }
+    if (true) {
+        var iid = document.createElement('img');
+        iid.setAttribute('src', 'https://ad.360yield.com/server_match?r=' + encodeURIComponent('https://apn1-match.justpremium.com/match/id?rid=r-310b5616-c6dc-440b-9fe7-2724fa20505e-12335-311288405&jp_uid=r-14dec61e-e17c-428e-9f54-d393a94e110b-23823-194266268&ex_uid={PUB_USER_ID}&partner_id=2'));
+        window.document.body.appendChild(iid);
+    }
+    if (true) {
+        var anx = document.createElement('img');
+        anx.setAttribute('src', 'https://ib.adnxs.com/getuid?https://apn1-match.justpremium.com/match/an?rid=r-310b5616-c6dc-440b-9fe7-2724fa20505e-12335-311288405&jp_uid=r-14dec61e-e17c-428e-9f54-d393a94e110b-23823-194266268&ex_uid=$UID');
+        window.document.body.appendChild(anx);
+    }
+    if (true) {
+        var unruly = document.createElement('img');
+        unruly.setAttribute('src', 'https://sync.1rx.io/usersync2/rmpssp?sub=justpremium&redir=' + encodeURIComponent('https://apn1-match.justpremium.com/match/un?rid=r-310b5616-c6dc-440b-9fe7-2724fa20505e-12335-311288405&jp_uid=r-14dec61e-e17c-428e-9f54-d393a94e110b-23823-194266268&ex_uid=[RX_UUID]'));
+        window.document.body.appendChild(unruly);
+    }
+    if (true) {
+        var sptx = document.createElement('img');
+        sptx.setAttribute('src', 'https://sync.search.spotxchange.com/partner?adv_id=8590&redir=' + encodeURIComponent('https://apn1-match.justpremium.com/match/spx?rid=r-310b5616-c6dc-440b-9fe7-2724fa20505e-12335-311288405&jp_uid=r-14dec61e-e17c-428e-9f54-d393a94e110b-23823-194266268&ex_uid=$SPOTX_USER_ID'));
+        window.document.body.appendChild(sptx);
+    }
+    if (true) {
+        var index = document.createElement('iframe');
+        index.setAttribute('frameBorder', 0);
+        index.setAttribute('src', 'https://ssum.casalemedia.com/usermatch?s=189872&cb=' + encodeURIComponent('https://apn1-match.justpremium.com/match/ie?jp_uid=r-14dec61e-e17c-428e-9f54-d393a94e110b-23823-194266268&ex_uid='));
+        window.document.body.appendChild(index);
+    }
+
+</script><iframe frameborder="0" src="./cm.html"></iframe><img src="https://ad.360yield.com/server_match?r=https%3A%2F%2Fapn1-match.justpremium.com%2Fmatch%2Fid%3Frid%3Dr-310b5616-c6dc-440b-9fe7-2724fa20505e-12335-311288405%26jp_uid%3Dr-14dec61e-e17c-428e-9f54-d393a94e110b-23823-194266268%26ex_uid%3D%7BPUB_USER_ID%7D%26partner_id%3D2"><img src="https://ib.adnxs.com/getuid?https://apn1-match.justpremium.com/match/an?rid=r-310b5616-c6dc-440b-9fe7-2724fa20505e-12335-311288405&amp;jp_uid=r-14dec61e-e17c-428e-9f54-d393a94e110b-23823-194266268&amp;ex_uid=$UID"><img src="https://sync.1rx.io/usersync2/rmpssp?sub=justpremium&amp;redir=https%3A%2F%2Fapn1-match.justpremium.com%2Fmatch%2Fun%3Frid%3Dr-310b5616-c6dc-440b-9fe7-2724fa20505e-12335-311288405%26jp_uid%3Dr-14dec61e-e17c-428e-9f54-d393a94e110b-23823-194266268%26ex_uid%3D%5BRX_UUID%5D"><img src="https://sync.search.spotxchange.com/partner?adv_id=8590&amp;redir=https%3A%2F%2Fapn1-match.justpremium.com%2Fmatch%2Fspx%3Frid%3Dr-310b5616-c6dc-440b-9fe7-2724fa20505e-12335-311288405%26jp_uid%3Dr-14dec61e-e17c-428e-9f54-d393a94e110b-23823-194266268%26ex_uid%3D%24SPOTX_USER_ID"><iframe frameborder="0" src="./usermatch.html"></iframe>
+
+
+</body></html>

@@ -1,0 +1,199 @@
+var creative = {};
+
+function init() {
+	// Ad Visible
+	gsap.set(['#viewport', '#border', '#backupBG'], {autoAlpha: 1});
+	gsap.set("#ctaHolder", {autoAlpha:0})
+	// Dom Elements
+	creative.viewPort = document.getElementById('viewport');
+	frameOne();
+}
+
+function frameOne() {
+
+	gsap.to("#turbwave", 14, {
+	  attr:{"baseFrequency":0.07},
+	  ease:Linear.easeNone
+	});
+	gsap.to("#turbwave", 9, {
+	  attr:{"baseFrequency":0.01},
+	  ease:Linear.easeNone, delay:5
+	});
+	
+	// gsap.to(["#F1-copy1", "#F1-copy1_2"], {backgroundImage:"unset", yoyo:true, repeat:9, delay:0, duration:0.09})
+	// gsap.to(["#F1-copy2", "#F1-copy2_2"], {backgroundImage:"unset", yoyo:true, repeat:9, delay:0, duration:0.09})
+	
+	gsap.set([
+		'.F1',
+		'#F1-bgMask1',
+		'#F1-image1',
+		'#F1-copy1',
+		'#F1-copy1_2',
+		".dot",
+		'#F1Copy2_2_Holder',
+		'#F1Copy2_Holder',
+		'#F1Copy1_2_Holder',
+		'#F1Copy1_Holder',
+		'#line', '#line2', '#bgHolder'
+
+	], {opacity:1});
+	gsap.fromTo(["#waterGlimmer"], {opacity:0},{opacity:0.4, ease:Power2.easeIn, duration:3, delay:1,
+		onComplete:function() {
+		gsap.to("#waterGlimmer", {x:0, z:0.01, duration:0.08, repeat:140, onRepeat:runShimmer})
+	  }
+	})
+
+	function runShimmer(){
+	gsap.to(["#waterGlimmer"], {alpha:random(0.4, 0.525), duration:0.08,  ease:Linear.easeNone})
+	}
+
+	
+	gsap.to("#light", {opacity:0.4, duration:3, delay:1, ease:Power3.easeInOut})
+	gsap.to("#light", {opacity:0.6, duration:2.5, delay:4, ease:Power3.easeInOut})
+	gsap.to("#light", {opacity:0.3, duration:4.5, delay:6, ease:Power3.easeInOut})
+	gsap.to("#light", {opacity:0.2, duration:3.5, delay:10, ease:Power3.easeInOut})
+
+gsap.to("#F1-copy2_2", {duration:0.6, z:0.09, y:13, delay:1.1, ease:Power2.easeOut})
+    	gsap.to("#F1-copy2", {duration:0.6, z:0.09, y:-9, delay:1.1, ease:Power2.easeOut})
+    	gsap.from(['#F1-copy2', '#F1-copy2_2'], {opacity:0, delay:1.1, duration:0.2, ease:Power3.easeInOut})
+    	gsap.from("#line", {scaleX:0, z:0.01, x:-86, duration:0.25, delay:0.8,  ease:Power3.easeOut})
+    	gsap.to("#line", {scaleX:0, z:0.01, x:86, duration:0.25, delay:1, ease:Power3.easeOut})
+
+
+    	gsap.to("#F1-copy1_2", {duration:0.6, z:0.09, y:13, delay:0.8, ease:Power2.easeOut})
+    	gsap.to("#F1-copy1", {duration:0.6, z:0.09, y:-9, delay:0.8, ease:Power2.easeOut})
+    	gsap.from(['#F1-copy1', '#F1-copy1_2'], {opacity:0, delay:0.7, duration:0.2, ease:Power3.easeInOut})
+	gsap.from("#line2", {scaleX:0, z:0.01, x:-83, duration:0.25, delay:0.5,  ease:Power3.easeOut})
+    	gsap.to("#line2", {scaleX:0, z:0.01, x:83, duration:0.25, delay:0.6, ease:Power3.easeOut})
+    	
+
+    	gsap.to(['#F1-copy1', '#F1-copy1_2', '#F1-copy2', '#F1-copy2_2'], {autoAlpha:0, delay:3.3, duration:1, ease:Power3.easeInOut})
+
+
+	gsap.set("#bgHolder", {scale:1.05})
+	gsap.to(['#clipMask'], {duration:0.8, x:409, ease:Linear.easeNone, z:0.01, delay:0.18});
+	gsap.set(['#F1-image2'], {duration:1.8, opacity:0.9});
+	gsap.from(["#bgHolder"], {scale:1.2, rotation:-1, duration:15, x:-20, y:10, z:0.01} )
+	gsap.from(["#bgHolder"], {skewX:0.8, skewY:0.8, duration:2.5, yoyo:true, repeat:4, ease:Power1.easeInOut} )
+	
+	//fade in logo
+	gsap.to(['#F1-logo1'], {duration:1.2, delay: 3.5, autoAlpha:1, ease:Power2.easeInOut});
+
+
+	gsap.delayedCall(4.25, frameTwo);
+}
+
+function frameTwo(){
+	gsap.set([
+		"#frame2Copy",
+		".F2Copy",
+		"#F2-copy1_1",
+		"#F2-copy1_2",
+		"#F2-copy2_1",
+		"#F2-copy2_2",
+		"#F2-copy2_3",
+		"#F2-copy3_1",
+		"#F2-copy3_2",
+		"#F2-copy3_3",
+
+		
+	], {opacity:1});
+	gsap.from("#copy2_1", {duration:6, x:10, ease:Power2.easeOut, z:0.03, skewY:0.01})
+    	gsap.from("#copy2_2", {duration:6, x:5, delay:0.3,  ease:Power2.easeOut, z:0.03, skewY:0.01})
+
+    	gsap.from("#copy2_3", {duration:6, x:7, delay:0.7, ease:Power2.easeOut, z:0.03, skewY:0.01})
+    // gsap.from("#copy2_1", {duration:3, x:20, ease:Power1.easeInOut})
+
+
+    	gsap.to(['#copy2_1', '#copy2_2', '#copy2_3'], {autoAlpha:0, delay:3, duration:1.4, ease:Power3.easeInOut})
+
+
+    	gsap.from(["#F2-copy1_1", "#F2-copy1_2"], {duration:0.4,  x:-20,  opacity:0, delay:0.5,  stagger:0.04, z:0.01, ease:Back.easeOut})
+    	gsap.from(["#F2-copy2_1", "#F2-copy2_2", "#F2-copy2_3"], {duration:0.4,  x:20,  opacity:0, delay:0.8,  stagger:0.04, z:0.01, ease:Back.easeOut})
+    	gsap.from(["#F2-copy3_1", "#F2-copy3_2", "#F2-copy3_3"], {duration:0.4,  x:-20,  opacity:0, delay:1.2,  stagger:0.04, z:0.01, ease:Back.easeOut})
+	gsap.delayedCall(3.75, frameThree);
+
+}	
+
+function frameThree(){
+	gsap.set([
+		"#frame3Copy",
+		".F3Copy",
+
+		"#F3-copy1_1",
+		"#F3-copy1_2",
+		"#F3-copy2_1",
+		"#F3-copy2_2",
+		"#F3-copy2_3",
+		"#F3-copy3_1",
+		"#F3-copy3_2",
+		"#F3-copy3_3",
+		
+	], {opacity:1});
+
+    	gsap.from("#copy3_1", {duration:6, x:10, ease:Power2.easeOut, z:0.01, skewY:0.01})
+    	gsap.from("#copy3_2", {duration:6, x:5, delay:0.3,  ease:Power2.easeOut, z:0.01, skewY:0.01})
+
+    	gsap.from("#copy3_3", {duration:6, x:7, delay:0.7, ease:Power2.easeOut, z:0.01, skewY:0.01})
+
+    	gsap.to(['#copy3_1', '#copy3_2', '#copy3_3'], {autoAlpha:0, delay:3, duration:1, ease:Power3.easeInOut})
+
+
+    	gsap.from(["#F3-copy1_1", "#F3-copy1_2"], {duration:0.4,  x:-20,  opacity:0, delay:0.5,  stagger:0.04, z:0.01, ease:Back.easeOut})
+    	gsap.from(["#F3-copy2_1", "#F3-copy2_2", "#F3-copy2_3"], {duration:0.4,  x:20,  opacity:0, delay:0.8,  stagger:0.04, z:0.01, ease:Back.easeOut})
+    	gsap.from(["#F3-copy3_1", "#F3-copy3_2", "#F3-copy3_3"], {duration:0.4,  x:-20,  opacity:0, delay:1.2,  stagger:0.04, z:0.01, ease:Back.easeOut})
+	
+
+    	gsap.delayedCall(3.5, endFrame);
+
+}
+
+function endFrame(){
+
+	gsap.set([
+		'.EF',
+		'#text-effect',
+		'#lockup-image',
+		'.CTA',
+		'#ctaHolder',
+		'.ctaLetter',
+	], {opacity:1});
+	gsap.set("#ctaHolder", {autoAlpha:1, y:-16, x:20})
+
+	gsap.set(['.ctaLetter'], {force3D:false})
+    	gsap.from(['.ctaLetter'], {duration:0.2, z:0.01, x:40, scaleX:6, rotationZ: -10, x:20,  opacity:0, delay:1,  stagger:0.05, ease:Power2.easeOut})
+
+gsap.from(['#text-effect'], {duration:0.5, opacity:0, ease:Power2.easeOut});
+	gsap.from(['#lockup-image'], {duration:3, z:0.03, scale:0.8, x:5, transformOrigin:"170px 140px", ease:Power0.none, z:0.1, rotationZ:0.01, force3D:true})
+    	// gsap.from(txtCTA, {duration:0.2, x:40, scaleX:6, rotationZ: -10, x:20,  opacity:0, delay:1.5,  stagger:0.05, ease:Power2.easeOut})
+
+	gsap.from(['#EF-copy1'], {duration:2, z:0.02, skewY:0.01, x: 5, opacity:0, transformOrigin:"150px 115px", ease:Power2.easeInOut});
+	gsap.from(['#EF-copy2'], {duration:2, z:0.02, skewY:0.01,  x:-5, opacity:0,  transformOrigin:"150px 144px", ease:Power2.easeInOut}, "-=0.2");
+	gsap.from(["#EF-copy3"], {duration:0.75,  delay:1, opacity:0, ease:Power2.easeInOut});
+	gsap.from(['.CTA'], {duration:0.3, delay:1.5,  opacity:0, onComplete:viewPortOver}, "+=0.2");
+}
+
+function addEventListeners() {
+	creative.viewPort.addEventListener("mouseover", viewPortOver);
+}
+
+function viewPortOver(e){
+	creative.viewPort.removeEventListener("mouseover", viewPortOver);
+	gsap.set(['.CTA'], {opacity:1});
+	gsap.fromTo(['#EF-ctaArrow'], {x:0, opacity:1}, 
+	{duration:0.5, opacity:0.8, ease:Power2.easeInOut, x:-3, repeat:1, yoyo:true, onComplete:viewPortOut});
+}
+
+function viewPortOut(e){
+	creative.viewPort.addEventListener("mouseover", viewPortOver);
+}
+
+function random(min, max) {
+  if (max == null) { max = min; min = 0; }
+  if (min > max) { var tmp = min; min = max; max = tmp; }
+  return min + (max - min) * Math.random();
+}
+
+function setSheen(){
+	// gsap.set('#EF_sheen1', {x:0});
+}
